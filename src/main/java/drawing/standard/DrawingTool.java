@@ -1,4 +1,4 @@
-package drawing;
+package drawing.standard;
 
 import java.util.List;
 

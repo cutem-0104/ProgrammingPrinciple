@@ -1,42 +1,42 @@
 @startuml
 
 package drawing {}
-abstract class drawing.Shape {
+abstract class drawing.standard.Shape {
   {abstract} void Draw()
 }
 
-abstract class drawing.Circle {
+abstract class drawing.standard.Circle {
   double itsRadious
-  drawing.Point itsCenter
+  drawing.standard.Point itsCenter
   {abstract} void Draw()
 }
-abstract class drawing.Square {
+abstract class drawing.standard.Square {
   double itsSide
-	drawing.Point itsTopLeft
+	drawing.standard.Point itsTopLeft
   {abstract} void Draw()
 }
 
-class drawing.Point {
+class drawing.standard.Point {
   double x
   double y
 }
-class drawing.BigCircle {
+class drawing.standard.BigCircle {
   void Draw()
 }
-class drawing.BigSquare {
+class drawing.standard.BigSquare {
   void Draw()
 }
-class drawing.DrawingTool {
+class drawing.standard.DrawingTool {
   void DrawAllShapes(shapeList)
 }
 
-drawing.DrawingTool -r- drawing.Shape
-drawing.Shape --|> drawing.Circle
-drawing.Shape --|> drawing.Square
-drawing.Circle --* drawing.Point
-drawing.Square --* drawing.Point
-drawing.Circle --|> drawing.BigCircle
-drawing.Square --|> drawing.BigSquare
+drawing.standard.DrawingTool -r- drawing.standard.Shape
+drawing.standard.Shape --|> drawing.standard.Circle
+drawing.standard.Shape --|> drawing.standard.Square
+drawing.standard.Circle --* drawing.standard.Point
+drawing.standard.Square --* drawing.standard.Point
+drawing.standard.Circle --|> drawing.standard.BigCircle
+drawing.standard.Square --|> drawing.standard.BigSquare
 
 
 @enduml

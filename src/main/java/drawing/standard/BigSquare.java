@@ -1,4 +1,4 @@
-package drawing;
+package drawing.standard;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -14,7 +14,7 @@ public class BigSquare extends Square {
 
   @Override
   public void draw() {
-    logger.log(Level.INFO, "=== Drawing Information for drawing.BigSquare ===");
+    logger.log(Level.INFO, "=== Drawing Information for drawing.standard.BigSquare ===");
     logger.log(Level.INFO, "Side = {0}", itsSide);
     logger.log(Level.INFO, "TopLeft (x,y) = ({0})", itsTopLeft.x + "," + itsTopLeft.y);
   }

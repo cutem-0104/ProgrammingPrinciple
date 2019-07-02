@@ -1,4 +1,4 @@
-package drawing;
+package drawing.standard;
 
 public abstract class Square extends Shape {
 
