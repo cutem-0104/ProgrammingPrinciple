@@ -1,0 +1,42 @@
+@startuml
+
+package drawing {}
+abstract class drawing.Shape {
+  {abstract} void Draw()
+}
+
+abstract class drawing.Circle {
+  double itsRadious
+  drawing.Point itsCenter
+  {abstract} void Draw()
+}
+abstract class drawing.Square {
+  double itsSide
+	drawing.Point itsTopLeft
+  {abstract} void Draw()
+}
+
+class drawing.Point {
+  double x
+  double y
+}
+class drawing.BigCircle {
+  void Draw()
+}
+class drawing.BigSquare {
+  void Draw()
+}
+class drawing.DrawingTool {
+  void DrawAllShapes(shapeList)
+}
+
+drawing.DrawingTool -r- drawing.Shape
+drawing.Shape --|> drawing.Circle
+drawing.Shape --|> drawing.Square
+drawing.Circle --* drawing.Point
+drawing.Square --* drawing.Point
+drawing.Circle --|> drawing.BigCircle
+drawing.Square --|> drawing.BigSquare
+
+
+@enduml
